@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Darumadrop One', 'Noto Sans JP', sans-serif;
+    color: azure;
+    font-size: 30px;
+} 
+
+p.migiyose {
+    margin-left: 20px;
+}
+p.migiyose2 {
+    margin-left: 20px;
+}
+p.migiyose3 {
+    margin-left: 20px;
+}
+
+img {
+    max-width: 95%;
+}
+
+a:hover {
+    color: rgb(207, 235, 95);
+    font-size: 35px;
+    text-shadow: 3px 3px 0 rgb(140, 156, 140);
+    transition: text-shadow .25s;
+}
+
+.wrapper {
+    /* 最大の横幅を1300px */
+    max-width: 1300px;
+    /* 外側の上下０の余白、横幅自動で余白 */
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+#particles-js{ 
+    position:fixed;/*描画固定*/
+    z-index:-1;/*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    background-color:#06062c;/*背景色*/
+}
+ 
+
+/* header */
+header {
+    /* 下にスクロールしても上に固定させる */
+    position: fixed;
+    width: 100%;
+    background-color:#06062c;;
+    /* 上への表示具合 */
+    z-index: 10;
+}
+
+header h2 {
+    padding: 15px;
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(228, 234, 234);
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+header nav {
+    /* width: 100%; */
+    background-color: rgb(14, 23, 48);
+    /* 内側の下側の余白 */
+    padding-bottom: 10px;
+    padding-left: 20px;
+    /* justify-content: space-evenly; */
+}
+
+header nav ul {
+    /* 黒ポツを消す */
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+header nav ul li {
+    /* 横並びに */
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+header nav ul li a {
+    /* 下線を無くす */
+    text-decoration: none;
+    color: rgb(198, 235, 86);
+    align-items: center;
+    font-size: 30px;
+}
+
+
+/* article */
+.new-article {
+    /* 横並びに */
+    display: flex;
+    /* よさげな感覚に */
+    justify-content: space-around;
+    /* 小さく真ん中にまとめる */
+    align-items: center;
+    padding-top: 150px;
+    margin-bottom: 70px;
+    /* 文字を中央に */
+    text-align: center;
+}
+
+audio {
+    margin-left: 60px;
+}
+
+.new-article article{
+    width: 32%;
+}
+
+article p {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+article a {
+    text-decoration: none;
+    color: rgb(240, 235, 235);
+    font-size: 20px;
+    display: block;
+    /* aタグはインライン要素のためmarginあてられない */
+    margin-top: 10px;
+}
+
+article a::after {
+    content: "";
+    display: block;
+    width: 80px;
+    background-color: black;
+    height: 1px;
+    margin: 0 auto;
+}
+
+/* main section */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    /* 66%左に寄せる */
+    flex: 0.66;
+}
+
+main article {
+    margin-bottom: 50px;
+}
+
+main .blog-title {
+    font-size: 30px;
+}
+
+main ul {
+    list-style:none;
+    display: flex;
+    padding: 10px 0 10px 0;
+}
+
+main ul li {
+    margin-right: 40px;
+}
+
+main img {
+    width: 100%;
+}
+
+main .article-intro {
+    text-align: center;
+    padding: 10px 85px 30px 40px;
+}
+
+/* aside section */
+aside {
+    /* 右側33％側にあててく */
+    flex: 0.33;
+}
+
+aside .author {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.author h4 {
+    margin: 20px;
+}
+
+.author p {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+aside .ranking h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ranking-article a {
+    text-align: center;
+    text-decoration: none;
+    color:black;
+}
+
+.ranking-article a img {
+    padding: 5px;
+}
+
+.ranking-article p {
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* archiveアーカイブ */
+.archive {
+    margin-top: 40px;
+}
+
+.archive h4 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.archive ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+    /* 線をつける */
+    border-bottom: 1px solid black;
+}
+
+.archive ul li {
+    padding: 25px;
+    border-top: 1px solid rgb(203, 252, 5);
+}
+
+.archive ul li a {
+    text-decoration: none;
+    margin-left: 75px;
+    color: rgb(240, 234, 234);
+}
+
+/* メディアクエリ設定 */
+@media screen and (max-width: 768px) {
+    .new-article {
+        /* 768以下になったら縦表示に */
+        flex-direction: column;
+    }
+
+    .new-article article {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    main article img{
+       width: 100%;
+       margin-left: 15px;
+    }
+
+    aside .ranking img {
+        width: 100%;
+        margin-left: 15px;
+    }
+}
+
+
+
+
+.star {
+    animation: kirakira 8s linear;
+    color: rgb(11, 11, 11);
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    position: fixed;
+    top: -1em;
+    z-index: 1000;
+}
+
+@keyframes kirakira {
+    0% {
+        transform:translateY(0) rotateY(0);
+    }
+    100% {
+        transform:translateY(calc(100vh + 1em)) rotateY(3600deg);
+    }
+}

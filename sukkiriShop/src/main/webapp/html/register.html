@@ -1,0 +1,439 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+	<title>新規登録画面</title>
+  	<style>
+		body {
+			font-family: 'Darumadrop One', cursive;
+			text-align: center;
+			-webkit-text-stroke: 1px rgb(0, 0, 0);
+  			
+			font-size: 50px;
+			width: 100%;
+			background-image:url(https://onwa-illust.com/wp-content/uploads/2023/06/macho_dog_03.png);
+			/* 画像を常に天地左右の中央に配置 */
+			background-position: center center;
+			/* 画像をタイル状に繰り返し表示しない */
+			background-repeat: no-repeat;
+			/* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+			background-size: cover;  
+			/* 背景画像が読み込まれる前に表示される背景のカラー */
+			background-color: rgb(213, 230, 210);    
+			font-weight:500;
+			color: rgb(128, 0, 64);
+
+			}
+			
+			h1 {
+			    font-size: 80px;
+			}
+		
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			input[type="date"]{
+			    height: 35px;
+			    width: 250px;
+			}
+	
+			input[type="submit"]{
+			    border: 1px solid #24292e;
+			    background-color: #66FF99;
+			    width: 300px;
+			    height: 100px;
+			    padding: 15px 0;
+			    color: #fff;
+			    transition: all 0.5s;
+			    font-size: 30px;
+			    margin-top: 10px;
+			    
+			}
+			
+			input:hover[type="submit"]{
+			    background-color: #00FF33;
+			    color: #24292e;
+			    cursor: pointer;
+			    font-size: 45px;
+			    text-shadow: 5px 5px 0 rgb(140, 156, 140);
+			    
+			}
+			
+					
+
+
+		
+
+			
+			ul{
+			  list-style-type: none;
+			  width: 220px;
+			  margin: auto;
+			  
+			}
+			
+			li {
+			  position: relative;
+			  padding: 10px;
+			  padding-left: 100px;
+			  height:30px;
+			
+			}
+			
+			
+			label:before {
+			    content: "";
+			    width: 15px;
+			    height: 15px;
+			    background: rgb(128, 0, 64);
+			    position: absolute;
+			    left: 7px;
+			    top: calc(50% - 13px);
+			    box-sizing: border-box;
+			    border-radius: 50%;
+			}
+			
+			input[type="radio"] {
+			  opacity: 0;
+			  display: inline-block;
+			  vertical-align: middle;
+			  z-index: 100;
+			  margin: 0;
+			  padding: 0;
+			  width: 100%;
+			  height: 30px;
+			  position: absolute;
+			  left: 0;
+			
+			  cursor: pointer;
+			}
+			
+			.bullet {
+			    position: relative;
+			    width: 25px;
+			    height: 25px;
+			    left: -3px;
+			    top: 2px;
+			    border: 5px solid rgb(128, 0, 64);
+			    opacity: 0;
+			    border-radius: 50%;
+			}
+			
+			input[type="radio"]:checked ~ .bullet {
+			  position:absolute;
+			  opacity: 1;
+			  animation-name: explode;
+			  animation-duration: 0.350s;
+			}
+			
+			.line {
+			  position: absolute;
+			  width: 10px;
+			  height: 2px;
+			  background-color: rgb(0, 128, 0);
+			  opacity:0;
+			}
+			
+			.line.zero {
+			  left: 11px;
+			  top: -21px;
+			  transform: translateY(20px);
+			  width: 2px;
+			  height: 10px;
+			}
+			
+			.line.one {
+			  right: -7px;
+			  top: -11px;
+			  transform: rotate(-55deg) translate(-9px);
+			}
+			
+			.line.two {
+			  right: -20px;
+			  top: 11px;
+			  transform: translate(-9px);
+			}
+			
+			.line.three {
+			  right: -8px;
+			  top: 35px;
+			  transform: rotate(55deg) translate(-9px);
+			}
+			
+			.line.four {
+			  left: -8px;
+			  top: -11px;
+			  transform: rotate(55deg) translate(9px);
+			}
+			
+			.line.five {
+			  left: -20px;
+			  top: 11px;
+			  transform: translate(9px);
+			}
+			
+			.line.six {
+			  left: -8px;
+			  top: 35px;
+			  transform: rotate(-55deg) translate(9px);
+			}
+			
+			.line.seven {
+			  left: 11px;
+			  bottom: -21px;
+			  transform: translateY(-20px);
+			  width: 2px;
+			  height: 10px;
+			}
+			
+			input[type="radio"]:checked ~ .bullet .line.zero{
+			  animation-name:drop-zero;
+			  animation-delay: 0.100s;
+			  animation-duration: 0.9s;
+			  animation-fill-mode: forwards;
+			}
+			
+			input[type="radio"]:checked ~ .bullet .line.one{
+			  animation-name:drop-one;
+			  animation-delay: 0.100s;
+			  animation-duration: 0.9s;
+			  animation-fill-mode: forwards;
+			}
+			
+			input[type="radio"]:checked ~ .bullet .line.two{
+			  animation-name:drop-two;
+			  animation-delay: 0.100s;
+			  animation-duration: 0.9s;
+			  animation-fill-mode: forwards;
+			}
+			
+			input[type="radio"]:checked ~ .bullet .line.three{
+			  animation-name:drop-three;
+			  animation-delay: 0.100s;
+			  animation-duration: 0.9s;
+			  animation-fill-mode: forwards;
+			}
+			
+			input[type="radio"]:checked ~ .bullet .line.four{
+			  animation-name:drop-four;
+			  animation-delay: 0.100s;
+			  animation-duration: 0.9s;
+			  animation-fill-mode: forwards;
+			}
+			
+			input[type="radio"]:checked ~ .bullet .line.five{
+			  animation-name:drop-five;
+			  animation-delay: 0.100s;
+			  animation-duration: 0.9s;
+			  animation-fill-mode: forwards;
+			}
+			
+			input[type="radio"]:checked ~ .bullet .line.six{
+			  animation-name:drop-six;
+			  animation-delay: 0.100s;
+			  animation-duration: 0.9s;
+			  animation-fill-mode: forwards;
+			}
+			
+			input[type="radio"]:checked ~ .bullet .line.seven{
+			  animation-name:drop-seven;
+			  animation-delay: 0.100s;
+			  animation-duration: 0.9s;
+			  animation-fill-mode: forwards;
+			}
+			
+			@keyframes explode {
+			  0%{
+			    opacity: 0;
+			    transform: scale(10);
+			  }
+			  60%{
+			    opacity: 1;
+			    transform: scale(0.5);
+			  }
+			  100%{
+			    opacity: 1;
+			    transform: scale(1);
+			  }
+			}
+			
+			@keyframes drop-zero {
+			  0% {
+			    opacity: 0;
+			    transform: translateY(20px);
+			    height: 10px;
+			  }
+			  20% {
+			    opacity:1;
+			  }
+			  100% {
+			    transform: translateY(-2px);
+			    height: 0px;
+			    opacity:0;
+			  }
+			}
+			
+			@keyframes drop-one {
+			  0% {
+			    opacity: 0;
+			    transform: rotate(-55deg) translate(-20px);
+			    width: 10px;
+			  }
+			  20% {
+			    opacity:1;
+			  }
+			  100% {
+			    transform: rotate(-55deg) translate(9px);
+			    width: 0px;
+			    opacity:0;
+			  }
+			}
+			
+			@keyframes drop-two {
+			  0% {
+			    opacity: 0;
+			    transform: translate(-20px);
+			    width: 10px;
+			  }
+			  20% {
+			    opacity:1;
+			  }
+			  100% {
+			    transform: translate(9px);
+			    width: 0px;
+			    opacity:0;
+			  }
+			}
+			
+			@keyframes drop-three {
+			  0% {
+			    opacity: 0;
+			    transform: rotate(55deg) translate(-20px);
+			    width: 10px;
+			  }
+			  20% {
+			    opacity:1;
+			  }
+			  100% {
+			    transform: rotate(55deg) translate(9px);
+			    width: 0px;
+			    opacity:0;
+			  }
+			}
+			
+			@keyframes drop-four {
+			  0% {
+			    opacity: 0;
+			    transform: rotate(55deg) translate(20px);
+			    width: 10px;
+			  }
+			  20% {
+			    opacity:1;
+			  }
+			  100% {
+			    transform: rotate(55deg) translate(-9px);
+			    width: 0px;
+			    opacity:0;
+			  }
+			}
+			
+			@keyframes drop-five {
+			  0% {
+			    opacity: 0;
+			    transform: translate(20px);
+			    width: 10px;
+			  }
+			  20% {
+			    opacity:1;
+			  }
+			  100% {
+			    transform: translate(-9px);
+			    width: 0px;
+			    opacity:0;
+			  }
+			}
+			
+			@keyframes drop-six {
+			  0% {
+			    opacity: 0;
+			    transform: rotate(-55deg) translate(20px);
+			    width: 10px;
+			  }
+			  20% {
+			    opacity:1;
+			  }
+			  100% {
+			    transform: rotate(-55deg) translate(-9px);
+			    width: 0px;
+			    opacity:0;
+			  }
+			}
+			
+			@keyframes drop-seven {
+			0% {
+			    opacity: 0;
+			    transform: translateY(-20px);
+			    height: 10px;
+			  }
+			  20% {
+			    opacity:1;
+			  }
+			  100% {
+			    transform: translateY(2px);
+			    height: 0px;
+			    opacity:0;
+			  }
+			}
+					
+				</style>
+</head>
+<body>
+	<h1>じょうほうをいれてください</h1>
+	<form action="/sukkiriShop/GendarServlet" method="post">
+	なまえ：<input type="text" name="name1" size="10"><br>
+	パスワード：<input type="password" name="pass1" size="10"><br>
+	メールアドレス：<input type="email" name="mail1" pattern=".+@.+\..+" title="メールアドレスは、aaa@dog.com のような形式で記入してください。"><br>
+	うまれたひ：<input type="date" name="calendar1" max="9999-12-31"><br>
+	ユーザーID：<input type="text" name="name2" size="15"><br>
+	わんちゃんのなまえ：<input type="text" name="name3" size="15"><br>
+	わんちゃんのうまれたひ：<input type="date" name="calendar2" max="9999-12-31"><br>
+	わんちゃんのせいべつ：<ul>
+	    <li>
+	      <input checked type="radio" name="gender1" value="男の子">
+	      <label>boy</label>
+	      <div class="bullet">
+	        <div class="line zero"></div>
+	        <div class="line one"></div>
+	        <div class="line two"></div>
+	        <div class="line three"></div>
+	        <div class="line four"></div>
+	        <div class="line five"></div>
+	        <div class="line six"></div>
+	        <div class="line seven"></div>
+	      </div>
+	    </li>
+	    <li>
+	      <input type="radio" name="gender1" value="女の子">
+	      <label>girl</label>
+	      <div class="bullet">
+	        <div class="line zero"></div>
+	        <div class="line one"></div>
+	        <div class="line two"></div>
+	        <div class="line three"></div>
+	        <div class="line four"></div>
+	        <div class="line five"></div>
+	        <div class="line six"></div>
+	        <div class="line seven"></div>
+	      </div>
+	    </li>
+	 
+  	</ul><br>
+
+  <input type="submit" value="入力確認画面">　
+ 
+  </form>
+
+</body>
+</html>

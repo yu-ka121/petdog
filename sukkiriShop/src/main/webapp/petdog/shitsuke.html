@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  <title>犬の飼い方・しつけ方</title>
+  <style>
+    #info-text {
+      white-space: pre-line;
+    }
+
+    body {
+      width: 100%;
+      background-image:url(14408392-L-imagenavi.jpg);
+    /* 画像を常に天地左右の中央に配置 */
+      background-position: center center;
+    
+    /* 画像をタイル状に繰り返し表示しない */
+      background-repeat: no-repeat;
+    
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+      /* background-attachment: fixed; */
+    
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+      background-size: cover;
+    
+    /* 背景画像が読み込まれる前に表示される背景のカラー */
+      background-color: #464646;
+      
+      text-align: center;
+      font-family: 'Zen Kurenaido', sans-serif;
+    }
+
+    h1 {
+      font-size: 90px;
+      font-weight: bold;
+      text-shadow: 3px 3px 0 rgb(248, 245, 245);
+    }
+
+    p {
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 3px 3px 0 rgb(248, 245, 245);
+    }
+	a {
+		font-size: 40px;
+		text-decoration: none;
+		color: forestgreen;
+		font-weight: bold;
+	}
+	 a:hover {
+      background-color: rgb(192, 192, 192);
+      color: rgb(0, 255, 128);
+      cursor: pointer;
+      font-size: 50px;
+      text-shadow: 5px 5px 0 rgb(242, 244, 242);
+    }
+	
+    button {
+      font-size: 40px;
+      color: white;
+      background-color: brown;
+      /* display: flex; */
+      font-family: 'Zen Kurenaido', sans-serif;
+    }
+
+    button:hover {
+      background-color: #76c9cd;
+      color: #24292e;
+      cursor: pointer;
+      font-size: 50px;
+      text-shadow: 5px 5px 0 rgb(242, 244, 242);
+    }
+
+    .bounce-top {
+      -webkit-animation: bounce-top 3s both;
+      animation: bounce-top 3s both;
+    }
+
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+  </style>
+</head>
+<body>
+  <h1 class="bounce-top">犬の飼い方・しつけ方</h1>
+  <p id="info-text">見たい項目を押してね！</p>
+  <button id="new-environment-btn">新しい環境に慣れさせる</button>
+  <button id="night-crying-btn">夜泣きについて</button>
+  <button id="toire-btn">トイレ</button>
+  <button id="eat-btn">食事にルールを作ろう</button>
+  <button id="wakuchinn-btn">健康管理とワクチン接種</button>
+  <button id="touch-btn">どこでも触らせるクセをつけよう</button>
+  <button id="play-btn">遊んであげよう</button>
+  <button id="society-btn">社会に慣れさせる練習</button>
+  <button id="destruction-btn">甘咬み・破壊対策</button>
+  <button id="orusu-btn">上手にお留守番できる犬にしよう</button><br>
+ <a href="/sukkiriShop/petdog/main.jsp">マイページへ</a>
+  <script>
+    // 新しい環境に慣れさせる情報 (説明テキスト)
+    const newEnvironmentInfo = `
+      ・新しい環境に慣れさせる
+      犬を飼い始めた直後は、家族のかまい過ぎで子犬が睡眠不足になってしまうことがあります。
+      特に飼い始めてしばらくの間は環境が変化するので、精神的・肉体的ストレスも重なって子犬が最も体調を崩しやすい時期です。
+      犬を迎えてしばらくは、はじめての環境に慣れさせることを第一に考えて、寝ている時は邪魔をせずたっぷり眠らせてあげましょう。
+      子犬が自分から寄ってきた時は優しくなでて、安心させてあげてください。
+    `;
+
+    // 夜泣きについての情報 (説明テキスト)+(全角のスペースじゃないと空白が反映されない)
+    const nightCryingInfo = `
+      ・夜泣きについて
+      子犬は、母犬と離れた寂しさからしばらく夜泣きをします。
+      十分眠れず体調を崩すこともあるので、子犬が新しい環境に慣れるまでの間は、眠るまでそばについていてあげましょう。
+      寂しがらないように、お湯を入れたペットボトルを母犬のニオイのついたバスタオルでくるんでハウスに入れるのも良いでしょう。
+    `;
+
+    const toire = `
+      トイレのしつけは、家に迎えたその日から行います。
+      しかし、間違った場所で排せつしても叱ったりするのはやめましょう。 恐怖で排せつ行為に不安を感じ、隠れて行う可能性も出てくるからです。
+      まずはトイレを設置する時に、トイレシーツにその子犬の排せつ物のニオイをつけておきましょう（ブリーダーや購入したペットショップからもらっておくと良い）。子犬をよく観察し、起きたらすぐにトイレへ誘導。この時は、抱いていくよりも犬が歩いて向かうように、誘導した方が早くトイレの場所を覚えます。子犬がトイレの場所をきちんと覚えるまでは、トイレタイムに飼い主がトイレまで誘導してあげましょう。
+      どうしても子犬をみておけない時は、ケージやサークルなどを利用し、全体にペットシーツを敷き詰めておく方法もあります。
+      
+
+　　　　　　　　　　　　　トイレトレーニング
+  
+  1. 眠る場所とは別にトイレを設置
+  犬は自分の眠る場所での排せつを本能的に嫌うので、
+  寝床とトイレは室内にきちんと別にして設置すること
+  
+  2. トイレタイムに誘導する
+  目を覚ました時、食事や水を飲んだ後、元気いっぱいに遊んだ後が主なトイレタイムです。
+  また他の部屋から戻った時に排泄する子もいます。それを考慮して、飼い主がその都度トイレの場所まで誘導しましょう
+  
+  3. トイレを探すしぐさを見たら誘導する
+  くんくんニオイを嗅いで部屋の隅に行ったり、くるくる回りながらお尻を突き出すポーズや、お尻を床にくっつけるポーズを見せたら「待って！」をかけて、素早くトイレに連れて行き、優しく排泄を促しましょう
+  
+  4. 正しい場所で排せつしたらほめる
+  誘導を根気よく繰り返すうちに、徐々にトイレの場所を覚えるようになります。
+  正しい場所で排せつしたら、ほめておやつを与えるようにすると、子犬も「ここで排せつをすると良いことがある！」と思いトイレの場所を楽しく覚えさせられます
+      `;
+
+      const eat = `
+      ・食事にルールを作ろう
+      ドッグフードは、年齢・月齢に合った「総合栄養食」の表示があるものを与えてください。
+      さまざまな食品／フードがありますが、栄養バランスや品質など信頼できるメーカーのものを選びましょう。ドライフードは、保管中に脂肪の酸化や変質が起こるので、買いだめせずに直射日光や高温多湿をさけて保管して、早めに与えてください。
+      栄養学的にはドッグフードと新鮮な水だけで足りますが、愛犬が目をキラキラさせて喜ぶおやつなどの「おいしいもの」も別に与えたくなるのが飼い主の心情です。おやつなどを与えることは犬の精神的にも良い刺激になりますが、質と量には配慮しましょう。一日に与える食事全体のカロリーの10％未満にしてください。`;
+
+      const wakuchinn = `
+      ・健康管理とワクチン接種
+      子犬を飼いはじめたら、なるべく早く動物病院へ連れていき健康診断を受けましょう。子犬の体にはまだ病気への免疫ができていません。安全のため、キャリーバッグやクレートなどに入れ、他の動物と接触できない状態で行くのがおすすめです。
+      ペットショップで購入後すぐに感染症や遺伝性疾患が見つかるケースもあります。お腹に寄生虫がいることもあるので便を持参して行くとよいでしょう。また、元気がない・食欲がない・吐くなどの場合、低血糖症をおこし命にかかわることもあるのですぐに病院へ行きましょう。 犬に多い伝染病はワクチン接種で予防できます。子犬の混合ワクチン接種は生後６週齢頃から複数回行います。また狂犬病予防法で生後90日以上の犬は1年に1回の狂犬病予防接種を受けて、国に登録するということが決められており、狂犬病ワクチンの接種も必要です。
+      成犬になってからも、年1回の接種が必要です。ワクチンの種類と回数は獣医師に相談しましょう。
+
+　　　　　　　ワクチン接種で予防できる主な病気
+
+・犬ジステンバー
+高い熱、目ヤニ、鼻水、クシャミが出て、元気と食欲が低下。特に子犬の死亡率が高い伝染病です
+
+・犬伝染性肝炎（犬アデノウイルス１型感染症）
+嘔吐や下痢、発熱などの症状が出る場合もありますが、全く症状を示さず突然死することもある伝染病です
+
+・犬パルボウイルス感染症
+食欲がなくなり、発熱や嘔吐、激しい下痢になります。伝染力が強く、非常に死亡率の高い病気です
+
+・犬パラインフルエンザ
+鼻水やせき、軽い発熱、扁桃腺の腫れなどがみられます。他のウイルスとの混合や二次感染がおこりやすく、その場合は重症になる可能性があります
+
+・犬アデノウイルス２型感染症
+熱や食欲不振、クシャミ、鼻水、乾いたせきなどの症状がみられます。他のウイルスとの混合や二次感染がおこりやすく、その場合は重症になる可能性があります
+
+・犬レプトスピラ感染症
+ネズミなどから、犬や人間などに感染する病気。この感染症のワクチンは血清型により、複数の種類が開発されています
+`;
+
+    const touch = `
+    どこでも触らせるクセをつけよう
+    愛犬を大切に思うなら、体のどこにでも触れるようにしておきましょう。体を触ることは日常のケアはもちろん、病気や怪我の早期発見にもつながります。
+    ただし、無理に触ると子犬が嫌がることがありストレスがかかるので注意しましょう。犬が心地よく思えるよう触り方を工夫して、いつでも健康チェックができるようにしておきましょう。特に興奮するタイプの子犬は、運動などでエネルギーを発散させた後、子犬のお尻をあなたの膝の上に乗せ、背中をあなたのお腹から胸にぴったりとくっつけるようにして静かに待ちましょう。暴れている時はしっかりと抱いて、静かになったらほめて自由にします。 ただし、攻撃的な性格の子の場合は無理にするのは止めましょう。
+
+　　　　　　触れるようになったら健康チェック
+・耳の中
+ゆっくりと声をかけながら、耳の中をそっと覗いて、赤くなっていないか、耳垢がたまっていないか、嫌な臭いがしないかをチェックしましょう
+・目
+目ヤニが多く出ていないか。また、まぶたを少し持ち上げて、結膜の状態を見て、赤くなっていないか確認しましょう
+・鼻
+鼻に適度の潤いがあるか。鼻水が出ていないかなども確認しましょう
+・口
+唇をめくって、歯や歯茎を見て、歯垢や歯石が付いていないか。乳歯や永久歯がきちんと生えているかを確かめておきましょう
+・足先
+爪が伸び過ぎていないか、パット（肉球）が傷ついていないかをチェックしましょう
+・お腹・お尻
+皮膚に異常はないか、外陰部に湿疹ができていないか、おりものや分泌物などで汚れていないか、肛門部分の汚れや、赤くなっていないか見ておきましょう
+
+・全身
+毛玉ができていないか、脱毛や皮膚に傷やできものがないか、さらにノミやダニなどがいないか、すみずみまでチェックしましょう
+
+　　　　　　子犬のうちから慣らしておこう
+・足ふき
+外に出るようになったら、室内犬の散歩終わりなど足を拭かなくてはいけないシーンがいっぱいあります。
+子犬の時から、スムーズにできるよう練習しましょう
+・ブラッシング
+被毛や地肌のケアのためにもブラッシングは大切です。美しさがアップするのはもちろん、愛犬とのコミュニケーションにもなるので定期的に行いましょう
+・歯磨き
+犬も高齢になると歯周病が多く発生します。健康で長生きするためには、子犬の時から歯磨きに慣らしておくことが大切です。小型犬は永久歯が生えた後も乳歯が抜けない場合がよくあり、放置しておくと歯並びが悪く、歯周病を引き起こす原因にもなります。歯磨きの時に注意して、気がついたらすぐに獣医師に相談しましょう
+`;
+
+
+const play = `
+・遊んであげよう！
+犬にとって遊びは心の栄養です。子犬と信頼関係を築き、うまくしつけるコツも遊びの中に含まれています。
+本来、犬の遊びの目的は「獲物を捕らえる練習」と「群れの仲間と仲良く暮らす」の2つ。実際、家庭で暮らす犬は自力で獲物を捕らえて食料を確保する必要がありませんが、狩りの本能とエネルギーは残っています。それを発散させる遊びをさせないと、物を壊す・吠えるなどよくない方向に力を向けるようになります。
+特に作業目的で品種改良された犬種は仕事が大好き。それなのに仕事を与えられないとイライラし、攻撃的になったりします。エネルギーをしっかり発散できている犬が非行に走ることは滅多にありません。
+
+　　　　　　犬の好きなおもちゃ
+・ボール
+ボールの動きが小動物の動きに似ているため捕らえたくなります。投げたボールを追いかけて、持って来させると運動にもなります
+・キューキュー鳴るおもちゃ
+小動物の声に似ているため犬の本能を刺激します。くわえて鳴らすことが快感に
+・オヤツ探しゲーム
+狩猟本能が顕著にでない犬でも、食べものが好きなら嗅覚を利用しゲームを。隠したオヤツを探すように促すと楽しく遊べます
+・ぬいぐるみ
+犬同士のようにじゃれ合ったり、獲物と見立ててくわえて振り回したりします
+・ゴム製の知育おもちゃ
+ゴム製の咬むおもちゃで、ドッグフードやおやつを詰め込むことができます。子犬は一生懸命取ろうとして時間をつぶせるので、夢中になるので、いたずらも減らせるでしょう。
+
+＊おもちゃの注意点
+・遊ぶ時は犬用のおもちゃに限定
+スリッパやタオルなど日用品をおもちゃにすると、おもちゃにしてほしくない日用品まで狙います。おもちゃと日用品は違うことを犬に理解させましょう
+・安全なおもちゃを使う
+犬が飲み込まない大きさ。咬んだ時に危険かないか事前にチェックを。特にボタンなどがついているとちぎって飲み込む恐れがあるので注意してください。消化管につまる恐れがあります
+・おもちゃを与えっぱなしにしない
+おもちゃは与えっぱなしにすると犬は早く飽きてしまうもの。毎回、犬用のおもちゃ箱に片付けて、日替わりで別のおもちゃを出すなどの工夫が必要です。また、おもちゃは与えるだけでなく、飼い主が楽しそうにいっしょに遊ぶことも大切です
+・号令や遊びのルールを教える
+ボールをくわえたまま犬が放さないと、その場で遊びは終わってしまいます。ボールを飼い主に返すと続いて遊べるというルールや、アイコンタクトをして「ボールを持ってくる」「放す」などの号令を教えながら遊ぶとしつけにもつながり、信頼関係も深まります
+`;
+
+    const society = `
+  ・社会に慣れさせる練習をしよう
+  親犬や兄弟犬、友達犬と接して、犬同士のコミュニケーション方法を学ぶこと。人間と触れ合い、世の中のいろんな音やモノなどを体験して慣れさせ「社会に順応する力を養う」ことを社会化といいます。 その社会化に一番適しているのが生後3カ月までの子犬の時期。 この時期に経験したことは順応しやすく、あまり怖がらなくなります。
+  逆に、部屋から出さない状態でこの時期を過ごすと、初めて見るものや聞き慣れない音に過敏に反応して、引きこもりや逃走することも。ただし、生まれつき怖がりのタイプもいます。
+  無理やり体験させるのではなく、子犬が楽しく過ごしているか、様子をみながら徐々に慣らしていきましょう。
+  
+　　　　　　子犬のうちに体験させておきたい項目
+・犬同士で遊ぶ時間を作る
+できるだけ他の犬といっしょに遊ばせる時間を作りましょう。近所に知り合いの犬がいないなら、パピー教室などを探しましょう
+・いろんなタイプの人と触れ合う機会を作る
+男性・女性・子供・高齢者など。
+子犬を抱いて近所への挨拶し触ってもらうのもいいでしょう
+・日常的な外出体験をさせる
+自動車に乗せる、人込みの中を歩くなど
+・将来世話になる場所で楽しい体験をさせる
+動物病院やトリミングサロンなどに遊びに行き、おやつをもらう、遊んでもらうなど、楽しい体験をさせましょう
+
+　　　　　　病気のワクチン、心のワクチン、
+　　　　　　　　　「どちらも大切です」
+「子犬の時期に行うワクチン接種がすべて終わり、子犬の体内にウイルスの免疫ができるまで、外に出さないように」というのが、今まで獣医師側が飼い主さんに指導してきたことです。 しかし、その時期に子犬を外に出さずにいろんな体験をさせないでおくと、社会化不足で犬の“心”の問題を引き起こすことが多くあります。外に出さなければ病気になるリスクは低くなりますが、社会化できていないと将来的に犬の問題行動につながることも多いのが事実です。 そのことを考えるとできるだけ早い時期にさまざまな体験をさせることは「心のワクチン」になるといえます。家に慣れたら少しずつ、周りの環境にも慣らしていくと良いと思います。その際には不特定多数の犬の集まる場所や病気の犬との接触、他の犬の排せつ物には注意しましょう。
+    `;
+    
+    const destruction = `
+    ・甘咬み・破壊対策をしよう
+  子犬は好奇心旺盛で、ニオイを嗅いだり、咬むことでその素材などを学習します。
+  人間の手に関しても、甘咬みをしますが、それを許しているとエスカレートして怪我を負うことにもなりかねません。
+  子犬の目の前で手をひらひらさせたり、獲物のような動きをしてじゃれさせるのは、子犬が手をおもちゃだと勘違いするので、絶対にやめましょう。遊ぶ時は必ず咬んでもいいおもちゃを使ってください。また子犬の時期は、歯が生え変わることもあり、いろんなものをかじりたい衝動にかられます。 気がつくとソファがボロボロになっていたというのもよくある話です。そうなる前に対策をとりましょう。
+    
+  　　　　　　　咬む行動を悪化させないで
+  ・遊んでいる時に手を咬む時
+  咬んだ瞬間に「痛い！」と言って遊びを中止して、部屋を出るなどしばらく無視することです。人間の手を咬むと遊びが中断される（=自分の行動で楽しいことができなくなる）経験から、咬んではいけないことを学習していきます。しかし、体罰や叱ることはさらに犬を興奮させ攻撃性を引き出す場合があるのでおすすめできません
+  ・家具などを咬み、破壊してしまう時
+  子犬には咬みたいという基本的欲求があります。また、長時間留守番をさせられたり、エネルギーをちゃんと発散できていない状態だと、そのストレスを咬むことに向いてしまいます。咬んではいけないものには、子犬が苦手な味のスプレーを。そして、咬むおもちゃを使ってエネルギーをそちらに向けさせて、たっぷりと遊んであげることが対策になります
+    `;
+    const orusu = `
+  ・上手にお留守番できる犬にしよう    
+  親犬や兄弟犬、友達犬と接して、犬同士のコミュニケーション方法を学ぶこと。人間と触れ合い、世の中のいろんな音やモノなどを体験して慣れさせ「社会に順応する力を養う」ことを社会化といいます。 その社会化に一番適しているのが生後3カ月までの子犬の時期。 この時期に経験したことは順応しやすく、あまり怖がらなくなります。
+  逆に、部屋から出さない状態でこの時期を過ごすと、初めて見るものや聞き慣れない音に過敏に反応して、引きこもりや逃走することも。ただし、生まれつき怖がりのタイプもいます。
+  無理やり体験させるのではなく、子犬が楽しく過ごしているか、様子をみながら徐々に慣らしていきましょう。
+    
+  　　　　　　　ハウス・トレーニング
+  1.快適なハウスを用意する
+  ハウスは子犬がリラックスして眠れる広さがあるものを。屋根があり、扉以外が囲まれている洞穴型のクレートタイプがおすすめです。成犬になった時でも頭から入って無理なく方向転換ができる大きさのハウスが良いでしょう。ただし、広すぎると寝床だと認識されず、そこで排せつしてしまう場合があるので注意してください
+  
+  2.ハウスに誘導する
+  母犬のニオイがついたもの、大好きなおもちゃ、食べ物などを中に入れて、子犬を呼び寄せてハウスの 中で与えます。これを繰り返し、ハウスのなかでは良いことが起こるというプラスのイメージをつけましょう
+
+  3.ハウスに慣れさせる
+  子犬が自ら喜んでハウスに入るようになったら、少しずつハウスで過ごす時間を増やしていきます。咬むおもちゃなどを入れて、夢中になって遊んでいる時に、少しの間扉を閉めてその状態にも慣らしましょう。この間は、必ずそばにいて隔離されたイメージを与えないようにしてください
+
+  4.飼い主が離れることに慣れさせる
+  普段からハウスの扉は開けておき、子犬が自分で中に入ってそこで休むようになったら、少しずつ飼い主がそばにいない状況にも慣れさせていきます
+
+  5.ハウスに滞在させる
+  子犬がハウスに十分慣れたら、扉を閉め、定期的に好物を入れてあげてハウスの中に子犬を長く滞在させるようにしましょう。最初は頻繁に入れ、子犬が出たがる前に扉を開けて出しましょう。しかし、出たがって吠えた場合は無視を。吠え止むのを待って、再び好物を入れます。吠えても無駄なこと、静かにしているといいことがあると教え、吠えていない時に出すようにしてください
+  
+  ・おとなしく過ごすことができるようになったら
+  ハウスでおとなしく過ごすことができるようになったら留守番も可能です。
+  ただし、その日はしっかり遊ばせてエネルギーを発散させておきましょう。また、子犬の負担にならないよう留守番時間を止めてください。ハウスの中ではトイレを我慢しますので、子犬の次のトイレタイムまでには帰宅するようにしてください
+  `;
+
+
+    // ボタンクリック時の処理
+    document.getElementById("new-environment-btn").addEventListener("click", function() {
+      document.getElementById("info-text").textContent = newEnvironmentInfo;
+    });
+
+    document.getElementById("night-crying-btn").addEventListener("click", function() {
+      document.getElementById("info-text").textContent = nightCryingInfo;
+    });
+
+    document.getElementById("toire-btn").addEventListener("click",function() {
+      document.getElementById("info-text").textContent = toire;
+    });
+
+    document.getElementById("eat-btn").addEventListener("click",function() {
+      document.getElementById("info-text").textContent = eat;
+    });
+
+    document.getElementById("wakuchinn-btn").addEventListener("click",function() {
+      document.getElementById("info-text").textContent = wakuchinn;
+    });
+
+    document.getElementById("touch-btn").addEventListener("click",function() {
+      document.getElementById("info-text").textContent = touch;
+    });
+
+    document.getElementById("play-btn").addEventListener("click",function() {
+      document.getElementById("info-text").textContent = play;
+    });
+
+    document.getElementById("society-btn").addEventListener("click",function() {
+      document.getElementById("info-text").textContent = society;
+    });
+
+    document.getElementById("destruction-btn").addEventListener("click",function() {
+      document.getElementById("info-text").textContent = destruction;
+    });
+
+    document.getElementById("orusu-btn").addEventListener("click",function() {
+      document.getElementById("info-text").textContent = orusu;
+    });
+    
+  </script>
+</body>
+</html>

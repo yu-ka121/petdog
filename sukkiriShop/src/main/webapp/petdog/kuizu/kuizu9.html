@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+      body {
+        font-weight: bold;
+      color: green;
+      width: 100%;
+      background-image:url(https://png.pngtree.com/background/20210716/original/pngtree-simple-cute-pet-dog-background-picture-image_1375478.jpg);
+    /* 画像を常に天地左右の中央に配置 */
+      background-position: center center;
+    
+    /* 画像をタイル状に繰り返し表示しない */
+      background-repeat: no-repeat;
+    
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+      /* background-attachment: fixed; */
+    
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+      background-size: cover;
+    
+    /* 背景画像が読み込まれる前に表示される背景のカラー */
+      /* background-color: #464646; */
+      
+      text-align: center;
+      /* font-family: 'Zen Kurenaido', sans-serif; */
+    }
+        figure.my-stamp {
+    border: 5px solid #ccc;
+    position: relative;
+    width: 400px;
+    height: 350px;
+    margin: 20px auto 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.my-stamp img.stamp2  {
+	display: inline-block;
+	color: #c00;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 1.0;
+	border: 1px solid #c00;
+	border-radius: 50%;
+	padding: 20px;
+	/* スタンプアニメーションのための初期値 */
+	visibility:hidden;
+        animation: sample_anime02 2s paused both;
+}
+.my-stamp-on img.stamp2 {
+  animation-play-state: running;
+}
+
+@keyframes sample_anime02 {
+  0% {
+       visibility:visible;
+	opacity: 0;
+	transform:  rotate(-30deg) scale(2.5);
+  }
+  30% {
+       visibility:visible;
+	opacity: 0.8;
+	transform:  rotate(5deg) scale(1.04);
+  }
+  100% {
+       visibility:visible;
+	opacity: 1.0;
+	transform: rotate(0deg);
+  }
+}
+#message1 {
+            position: relative;
+            top: -10px;
+            text-align: center;
+            font-size: 80px;
+  }
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+  <h1>犬種クイズ！クリックしたら答えがでるよ！</h1>
+  
+    <figure class="wp-block-image size-large is-resized my-stamp">
+       <img src="chiwawa.jpg" alt="" class="stamp2 wp-image-8151" width="300" height="300"/>
+       </figure>
+       <p id="message1"></p>
+
+       <script>
+        $(document).ready(function() {
+            $(".my-stamp").hover(function() {
+                $(this).addClass("my-stamp-on");
+            });
+
+        $(".my-stamp").click(function(event){
+          event.preventDefault(); //クリックでアニメーションが止まる
+          $("#message1").text("チワワ");
+        });
+        });
+    </script>
+</body>
+</html>
